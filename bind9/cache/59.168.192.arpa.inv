@@ -1,0 +1,9 @@
+$TTL 86400
+@ IN SOA ns.maxime14.infra.tld. mchenaud.maxime14.infra.tld. (
+202506301
+86400
+7200
+3600000
+3600 ) ;
+@ IN NS ns.maxime14.infra.tld.
+254 IN PTR routeur.maxime14.infra.tld.

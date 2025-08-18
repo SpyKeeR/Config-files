@@ -1,0 +1,6 @@
+source /usr/share/vim/vimXX/defaults.vim
+let skip_defaults_vim = 1
+if has('mouse')
+set mouse=r
+endif
+set paste

@@ -1,0 +1,16 @@
+$ORIGIN maxime14.infra.tld.
+$TTL 86400
+@ IN SOA ns.maxime14.infra.tld. mchenaud.maxime14.infra.tld. (
+202506304
+86400
+7200
+3600000
+3600 );
+@ IN NS ns.maxime14.infra.tld.
+ns IN A 192.168.59.111
+SRV-W19-AD IN A 192.168.59.101
+SRV-W19-SMB IN A 192.168.59.102
+SRV-DEB12-DNS IN A 192.168.59.111
+routeur IN A 192.168.56.254
+routeur IN A 192.168.59.254
+perdu IN CNAME www.perdu.com. 

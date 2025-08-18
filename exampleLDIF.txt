@@ -1,0 +1,77 @@
+dn: ou=Equipements,dc=leplatrenumerique,dc=org
+objectclass: organizationalUnit
+ou: Equipements
+description: Equipements de lentreprise
+
+dn: ou=Personnes,dc=leplatrenumerique,dc=org
+objectclass: organizationalUnit
+ou: Personnes
+description: Personnes de lentreprise
+
+dn: ou=Pc,ou=Equipements,dc=leplatrenumerique,dc=org
+objectclass: organizationalUnit
+ou: Pc
+description: PC de lentreprise
+
+dn: ou=Tablette,ou=Equipements,dc=leplatrenumerique,dc=org
+objectclass: organizationalUnit
+ou: Tablette
+description: Tablette de lentreprise
+
+dn: ou=Bureau,ou=Personnes,dc=leplatrenumerique,dc=org
+objectclass: organizationalUnit
+ou: Bureau
+description: Personnel de bureau de lentreprise
+
+dn: ou=Membres,ou=Personnes,dc=leplatrenumerique,dc=org
+objectclass: organizationalUnit
+ou: Membres
+description: Membres de lentreprise
+
+dn: cn=Aenor Duff,ou=Bureau,ou=Personnes,dc=leplatrenumerique,dc=org
+objectclass: inetOrgPerson
+givenname: Aenor
+sn: Duff
+cn: Aenor Duff
+uid: aDuff
+userpassword: aDuff
+
+dn: cn=Brewenn Marhic,ou=Bureau,ou=Personnes,dc=leplatrenumerique,dc=org
+objectclass: inetOrgPerson
+givenname: Brewenn
+sn: Marhic
+cn: Brewenn Marhic
+uid: bMarhic
+userpassword: bMarhic
+
+dn: cn=Eric Dumont,ou=Bureau,ou=Personnes,dc=leplatrenumerique,dc=org
+objectclass: inetOrgPerson
+givenname: Eric
+sn: Dumont
+cn: Eric Dumont
+uid: eDumont
+userpassword: eDumont
+
+dn: cn=Luc Sanchez,ou=Membres,ou=Personnes,dc=leplatrenumerique,dc=org
+objectclass: inetOrgPerson
+givenname: Luc
+sn: Sanchez
+cn: Luc Sanchez
+uid: lSanchez
+userpassword: lSanchez
+
+dn: cn=Elea Lastour,ou=Membres,ou=Personnes,dc=leplatrenumerique,dc=org
+objectclass: inetOrgPerson
+givenname: Elea
+sn: Lastour
+cn: Elea Lastour
+uid: eLastour
+userpassword: eLastour
+
+dn: cn=Jean Delasource,ou=Membres,ou=Personnes,dc=leplatrenumerique,dc=org
+objectclass: inetOrgPerson
+givenname: Jean
+sn: Delasource
+cn: Jean Delasource
+uid: jDelasource
+userpassword: jDelasource

@@ -1,0 +1,19 @@
+zone "maxime14.infra.tld" {
+	type master;
+	file "maxime14.infra.tld.db";
+	allow-transfer { 192.168.59.102; };
+	also-notify { 192.168.59.102; };
+};
+zone "56.168.192.in-addr.arpa" {
+	type master;
+	file "56.168.192.arpa.inv";
+};
+zone "59.168.192.in-addr.arpa" {
+	type master;
+	file "59.168.192.arpa.inv";
+};
+zone "maxime14.domaine.tssr" {
+	type forward;
+	forward only;
+	forwarders { 192.168.59.101; };
+	};

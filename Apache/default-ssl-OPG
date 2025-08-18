@@ -1,0 +1,59 @@
+<IfModule mod_ssl.c>
+<VirtualHost _default_:443>
+	ServerAdmin spykeer@operation-gamer.com
+
+	DocumentRoot /var/www
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+	<Directory /var/www/>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+
+Alias /ftpadmin  "/home/spykeer/proftpadmin/"
+
+<Directory /home/spykeer/proftpadmin/>
+        Options +FollowSymLinks
+        AllowOverride All
+        order allow,deny
+        allow from all
+    </Directory>
+ 
+# protection du repertoir config/
+ 
+<Directory /home/spykeer/proftpadmin/config>
+        Options -FollowSymLinks
+        AllowOverride None
+    </Directory>
+
+	ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+	<Directory "/usr/lib/cgi-bin">
+		AllowOverride None
+		Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+		Order allow,deny
+		Allow from all
+	</Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	CustomLog ${APACHE_LOG_DIR}/ssl_access.log combined
+
+	#   SSL Engine Switch:
+	#   Enable/Disable SSL for this virtual host.
+	SSLEngine on
+	SSLProtocol all -SSLv2
+	SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM
+ 
+	SSLCertificateFile /etc/ssl/operation-gamer.com.pem
+	SSLCertificateChainFile /etc/ssl/sub.class1.server.ca.pem
+	SSLCACertificateFile /etc/ssl/ca.pem
+</VirtualHost>
+</IfModule>
