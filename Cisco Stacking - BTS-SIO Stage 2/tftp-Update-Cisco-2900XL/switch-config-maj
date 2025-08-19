@@ -1,0 +1,135 @@
+
+!
+version 12.0
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+no service password-encryption
+!
+hostname Switch
+!
+enable secret 5 $1$rQpI$Hl3rszkGhvW9Kiprbtkty/
+!
+!
+!
+!
+!
+!
+ip subnet-zero
+!
+!
+!
+interface FastEthernet0/1
+ duplex full
+ speed 100
+!
+interface FastEthernet0/2
+ duplex full
+ speed 100
+!
+interface FastEthernet0/3
+ duplex full
+ speed 100
+!
+interface FastEthernet0/4
+ duplex full
+ speed 100
+!
+interface FastEthernet0/5
+ duplex full
+ speed 100
+!
+interface FastEthernet0/6
+ duplex full
+ speed 100
+!
+interface FastEthernet0/7
+ duplex full
+ speed 100
+!
+interface FastEthernet0/8
+ duplex full
+ speed 100
+!
+interface FastEthernet0/9
+ duplex full
+ speed 100
+!
+interface FastEthernet0/10
+ duplex full
+ speed 100
+!
+interface FastEthernet0/11
+ duplex full
+ speed 100
+!
+interface FastEthernet0/12
+ duplex full
+ speed 100
+!
+interface FastEthernet0/13
+ duplex full
+ speed 100
+!
+interface FastEthernet0/14
+ duplex full
+ speed 100
+!
+interface FastEthernet0/15
+ duplex full
+ speed 100
+!
+interface FastEthernet0/16
+ duplex full
+ speed 100
+!
+interface FastEthernet0/17
+ duplex full
+ speed 100
+!
+interface FastEthernet0/18
+ duplex full
+ speed 100
+!
+interface FastEthernet0/19
+ duplex full
+ speed 100
+!
+interface FastEthernet0/20
+ duplex full
+ speed 100
+!
+interface FastEthernet0/21
+ duplex full
+ speed 100
+!
+interface FastEthernet0/22
+ duplex full
+ speed 100
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface VLAN1
+ ip address 172.19.0.74 255.255.255.0
+ no ip directed-broadcast
+ no ip route-cache
+!
+ip default-gateway 172.19.0.254
+no cdp run
+snmp-server engineID local 0000000902000002B9CB08C0
+snmp-server community private RW
+snmp-server community public RO
+!
+line con 0
+ transport input none
+ stopbits 1
+line vty 0 4
+ password arte13
+ login
+line vty 5 15
+ password arte13
+ login
+!
+end

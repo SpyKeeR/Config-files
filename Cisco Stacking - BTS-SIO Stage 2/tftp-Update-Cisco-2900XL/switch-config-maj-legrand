@@ -1,0 +1,221 @@
+
+!
+version 12.0
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+no service password-encryption
+!
+hostname SW1
+!
+enable secret 5 $1$EWzt$AVGtZFg0BYWyWNw2u/H7S/
+!
+!
+!
+!
+!
+!
+ip subnet-zero
+!
+!
+controller LongReachEthernet 0
+!
+controller LongReachEthernet 1
+!
+controller LongReachEthernet 2
+!
+controller LongReachEthernet 3
+!
+controller LongReachEthernet 4
+!
+controller LongReachEthernet 5
+!
+controller LongReachEthernet 6
+!
+controller LongReachEthernet 7
+!
+controller LongReachEthernet 8
+!
+controller LongReachEthernet 9
+!
+controller LongReachEthernet 10
+!
+controller LongReachEthernet 11
+!
+controller LongReachEthernet 12
+!
+controller LongReachEthernet 13
+!
+controller LongReachEthernet 14
+!
+controller LongReachEthernet 15
+!
+controller LongReachEthernet 16
+!
+controller LongReachEthernet 17
+!
+controller LongReachEthernet 18
+!
+controller LongReachEthernet 19
+!
+controller LongReachEthernet 20
+!
+controller LongReachEthernet 21
+!
+controller LongReachEthernet 22
+!
+controller LongReachEthernet 23
+!
+!
+interface FastEthernet0/1
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/2
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/3
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/4
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/5
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/6
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/7
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/8
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/9
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/10
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/11
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/12
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/13
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/14
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/15
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/16
+ duplex full
+ speed 100
+ no cdp enable
+!
+interface FastEthernet0/17
+ duplex full
+ speed 100
+ switchport access vlan 2
+ no cdp enable
+!
+interface FastEthernet0/18
+ duplex full
+ speed 100
+ switchport access vlan 2
+ no cdp enable
+!
+interface FastEthernet0/19
+ duplex full
+ speed 100
+ switchport access vlan 2
+ no cdp enable
+!
+interface FastEthernet0/20
+ duplex full
+ speed 100
+ switchport access vlan 2
+ no cdp enable
+!
+interface FastEthernet0/21
+ duplex full
+ speed 100
+ switchport access vlan 2
+ no cdp enable
+!
+interface FastEthernet0/22
+ duplex full
+ speed 100
+ switchport access vlan 2
+ no cdp enable
+!
+interface FastEthernet0/23
+ no cdp enable
+!
+interface FastEthernet0/24
+ no cdp enable
+!
+interface VLAN1
+ ip address 172.19.0.74 255.255.255.0
+ no ip directed-broadcast
+ no ip route-cache
+!
+interface VLAN2
+ description Legrand
+ no ip directed-broadcast
+ no ip route-cache
+ shutdown
+!
+ip default-gateway 172.19.0.254
+no cdp advertise-v2
+no cdp run
+snmp-server engineID local 00000009020000B064A490C0
+snmp-server community private RW
+snmp-server community public RO
+!
+line con 0
+ exec-timeout 0 0
+ transport input none
+ stopbits 1
+line vty 0 4
+ password arte13
+ login
+line vty 5 15
+ password arte13
+ login
+!
+end
